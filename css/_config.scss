@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans&display=swap");
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+$tiny: 11px;
+$small: 13px;
+$medium: 15px;
+$big: 20px;
+$large: 32px;
+
+$white: hsl(0, 0%, 100%);
+$black: hsl(0, 0%, 0%);
+$dark-gray: hsl(0, 0%, 55%);
+$very-dark-gray: hsl(0, 0%, 41%);
+
+@mixin flex($align, $justify, $dir) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-direction: $dir;
+}
+
+@mixin grid($columns, $gap) {
+  display: grid;
+  grid-template-columns: $columns;
+  gap: $gap;
+}
+
+@mixin transitionFast {
+  transition: all 0.3s ease;
+}
+
+@mixin transitionSlow {
+  transition: all 0.6s ease;
+}
